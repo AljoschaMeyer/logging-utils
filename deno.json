@@ -1,15 +1,19 @@
 {
-    "$schema": "https://json.schemastore.org/tsconfig",
-    "display": "Deno",
-  
-    "imports": {
-      "macromaniajsx/jsx-dev-runtime": "../macromania/mod.ts",
-      "macromaniajsx/jsx-runtime": "../macromania/mod.ts",
-    },
-  
-    "compilerOptions": {
-      "lib": ["deno.ns", "dom"],
-      "strict": true
-    },
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Deno",
+
+  "name": "@aljoscha-meyer/logging-utils",
+  "version": "1.0.0",
+  "exports": "./mod.ts",
+
+  "imports": {
+    "@std/fmt": "jsr:@std/fmt@^0.221.0",
+    "macromaniajsx/jsx-dev-runtime": "../macromania/mod.ts",
+    "macromaniajsx/jsx-runtime": "../macromania/mod.ts"
+  },
+
+  "compilerOptions": {
+    "lib": ["deno.ns", "dom"],
+    "strict": true
   }
-  
+}

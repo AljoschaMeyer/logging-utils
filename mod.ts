@@ -1,10 +1,10 @@
 /**
  * Utilities for pretty logging. Just basic string formatting, no actual IO.
- * 
+ *
  * @module
  */
 
-import { Colors } from "./deps.ts";
+import * as Colors from "@std/fmt/colors";
 
 /**
  * Different logging levels, in ascending order of priority.
@@ -100,6 +100,8 @@ const infos: LevelInfo[] = [
  */
 export function renderMessagePrefix(level: LogLevel, groupDepth = 0): string {
   const i = levelToInt(level);
-  const padding =  i === 2 || i === 3 ? " " : "";
-  return `${infos[i].styleFn(`[${infos[i].label}]`)}${padding}${"    ".repeat(groupDepth)}`;
+  const padding = i === 2 || i === 3 ? " " : "";
+  return `${infos[i].styleFn(`[${infos[i].label}]`)}${padding}${
+    "    ".repeat(groupDepth)
+  }`;
 }
